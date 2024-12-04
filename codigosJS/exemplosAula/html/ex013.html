@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana</title>
+    <style> 
+        div#sem {
+            background-color: blue;
+            color: white;
+            font: 400 16pt 'Ariel';
+            width: 200px;            
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;        
+        }
+    </style>
+</head>
+<body>
+    <h1>Dia da Semana</h1>
+    <label for="txtsem">Dia da Semana</label>
+    <input type="week" name="txtsem" id="txtsem">
+    <input type="button" value="clique" onclick="clicar()">
+    <div id="sem"></div>
+    
+    <script>
+        function clicar() {
+            var agora = new Date()
+            var diaSem = agora.getDay()       
+            var res = window.document.querySelector('div#sem')
+                        
+            
+            switch (diaSem) {
+                case 0:
+                res.innerHTML = 'DOMING0'
+                    break;
+                case 1:
+                res.innerHTML = 'SEGUNDA-FEIRA'
+                    break;
+                case 2:
+                res.innerHTML = 'TERÇA-FEIRA'
+                    break; 
+                case 3:
+                res.innerHTML = 'QUARTA-FEIRA'
+                    break; 
+                case 4:
+                res.innerHTML = 'QUINTA-FEIRA'
+                    break;
+                case 5:
+                res.innerHTML = 'SEXTA-FEIRA'
+                    break;
+                case 6:
+                res.innerHTML = 'SÁBADO'    
+                    break;
+            }        
+        }
+    </script>
+</body>
+</html>

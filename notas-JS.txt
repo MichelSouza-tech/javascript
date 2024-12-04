@@ -1,0 +1,118 @@
+Curso JavaScript Anotações:
+
+
+<script></script>
+// tags do javascript
+
+window.alert('Minha mensagem aqui!')
+//Mostrar um pop-up com uma mensagem
+
+window.confirm('Está gostando do curso?')
+//mostra um pop-up de confirmação (ok / cancelar)
+
+window.prompt('Digite seu nome? ')
+//Mostra um popup com uma caixa de texto (não armazena dados)
+
+var nome = window.prompt('Qual é o seu nome?')
+//criar uma variável chamada nome
+// colocar os dados digitados pelo usuário na variável
+
+window.alert('É um grande prazer conhecer você, ' + nome)
+// mostrar um popup com um texto pré-configurado e os dados guardado dentro da variável nome  (nome do usuário(a))
+
+var parseInt n1 = window.prompt('Primeiro valor: ' );
+var parseInt n2 = window.prompt('Segundo valor: ');
+// criar 2 variáveis n1 e n2
+// força-las para o tipo inteiro 
+
+var s = n1 + n2
+// criar a variável s e guardar o resultado da soma de n1 com n2
+window.alert('A soma dos valores é ' + parseInt(s))
+// mostrar um popup com uma mensagem e o valor de s
+
+var n1 = Number(prompt('Primeiro valor: ')
+var n2 = NUmber(prompt('Segundo valor: '))
+// converter o tipo de dados do campo prompt (string/caracter) para o tipo numérico (o javascript vai decidir se será real ou inteiro)
+
+alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+// fazer a concatenação/junção de forma reduzida
+
+var nome = prompt('Seu nome? ')
+document.write('Olá ${nome}! Seu nome tem ${nome.length} letras')
+// mostrar o nome da pessoa e dizer quantas letras tem
+
+${nome.toUpperCase()} -> mostrar o nome em caixa alta
+${nome.toLowerCase()} -> mostrar o nome em minúsculas
+
+var p1 = window.document.getElementsByTagName('p')[0] -> pegar a tag pelo nome - dentro do documento HTML - dentro da janela (hierarquia)
+('p') -> nome da tag (no caso p de parágrafo)
+[0] -> posição da tag (começa por 0 zero)
+
+p1.innerText -> mostrar o valor contido na variável p1
+
+p1.style.color = 'green' -> mudar o estilo / cor da tag para verde 
+
+var corpo = window.document.body
+corpo.style.background = 'coral'
+// mudar a cor do documento para coral
+
+p1.innerHTML -> mostrar o texto com a tag filha
+
+var d = window.document.getElementById('msg')
+obter o valor da tag pelo "id" criado anteriormente dentro da pŕopria tag e colocar na variável d
+
+d.style.backgroundcolor = 'lime' 
+// mudar o fundo da tag específica para lime
+
+var m = window.document.getElementsByName('msg')[0]
+// semelhante ao getElementById porém usa o nome dado a tag anteriormente e tem que dizer a posição dela
+
+var d = window.document.querySelector('div#msg')
+faz a mesma coisa dos getElement acima mas pelo seletor css
+(mais recente)   
+<div>
+eventos do mouse:
+mouseenter - o mouse entrou na div ou outra tag qualquer  
+mousemove - mover o mouse dentro da div
+mousedown - clicar e segurar o botão do mouse  
+mouseup - soltar o botão do mouse 
+click - movimento do clique inteiro apertar e soltar 
+mouseout - sair da div ou qualquer tag
+
+função em javascript - conjunto de códigos que serão executadas só quando um evento ocorrer. ex:
+Um comando específico dentro de uma div/bloco só vai ser executado, ocorrer, quando houver um clique dentro desse bloco dessa div.
+
+um bloco em JS é delimitado dentro de chaves {}
+recebe o nome de function 
+function { } -> função anônima - sem nome
+
+nomes das funções são ações que podem ser feitas
+function ação (parametros) {}  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição </title>
+    <style>
+        body {
+            background-color: lightseagreen;
+            font: normal 18pt  'Arial';
+            color: darkmagenta;
+        }
+        div {
+            background-color: rgb(245, 202, 147);
+            padding: 5px;
+        }
+        div#resposta {
+            margin-top: 20px;
+            background-color: rgb(119, 211, 154);
+            padding: 10px;
+            color: blue;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Sistema de Votação</h1>
+    <div>
+        <label for="txtidade">Qual a sua idade:</label>
+        <input type="number" name="txtidade" id="txtidade">
+        <input type="button" value="verificar" onclick="verificar()">
+    </div>
+    <div id="resposta"></div>
+    <script>
+        function verificar() {
+            /* Pegar os dados do campo input */
+            var txtid = window.document.getElementById('txtidade')
+            var idade = Number(txtid.value)
+            /* Mostrar na tela o valor */
+            var res = window.document.querySelector('div#resposta')
+            res.innerHTML = `Você tem ${idade} anos. <br>`
+            /* Mostrar se pode ou não votar */
+            if (idade < 16) {
+                res.innerHTML += 'Não Vota!'
+            } else if (idade >= 16 && idade < 18 || idade >= 65) {
+                res.innerHTML += 'Voto Opcional!'
+            } else {
+                res.innerHTML += "Voto Obrigatório!"
+            }
+        }    
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Horário </title>
+    <style>
+        body {
+            background-color: rgb(55, 119, 30);
+            font: normal 18pt  'Arial';
+            color: #d69028;
+        }
+        div {
+            background-color: rgb(236, 216, 189);
+            padding: 5px;
+            color: blue;
+        }
+        div#resp {
+            margin-top: 20px;
+            background-color: rgb(119, 211, 154);
+            padding: 10px;
+            color: rgb(255, 0, 106);
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Sabendo as horas</h1>
+    <!-- <div>
+        <label for="txthora">Que horas tem?:</label>
+        <input type="text" name="txthora" id="txthora">
+        <input type="button" value="verificar" onclick="verificar()">
+    </div>
+    <div id="resp"></div>
+    <script>
+        function verificar() {
+            /* Pegar os dados do campo input */
+            var txth = window.document.getElementById('txthora')
+            var hora = (txth.value)
+            /* Mostrar na tela o valor */
+            var r = window.document.getElementById('resp')
+            r.innerHTML = `São exatamente: ${hora}hr. <br>`
+            /* Mostrar mensagem de acordo com a faixa horária */
+            if (hora < 6) {
+                r.innerHTML += 'Boa Madrugada!';                
+            } else if (hora < 12) {
+               r.innerHTML += 'Bom Dia!'
+            } else if (hora < 18) {
+               r.innerHTML += 'Boa Tarde!'
+            } else if (hora <= 24){
+                r.innerHTML += 'Boa Noite!'
+            } else {
+                r.innerHTML += 'Hora Inválida!'
+            }                        
+        }  -->
+
+        <div>
+            <label for="txthora">Que horas tem?:</label>            
+            <input type="button" value="verificar" onclick="verificar()">
+        </div>
+        <div id="resp"></div>
+        <script>
+            function verificar() {
+                /* Pegar a hora do sistema */
+                var agora = new Date()
+                var hora = agora.getHours()
+                                
+                /* Mostrar na tela o valor */
+                var r = window.document.getElementById('resp')
+                r.innerHTML = `São exatamente: ${hora}hr. <br>`
+                /* Mostrar mensagem de acordo com a faixa horária */
+                if (hora < 6) {
+                    r.innerHTML += 'Boa Madrugada!';                
+                } else if (hora < 12) {
+                   r.innerHTML += 'Bom Dia!'
+                } else if (hora < 18) {
+                   r.innerHTML += 'Boa Tarde!'
+                } else if (hora <= 24){
+                    r.innerHTML += 'Boa Noite!'
+                }                        
+            }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origem</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    
+    <label for="txtpais">País de Nascimento: </label>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="origem" onclick="nascer()">
+    
+    <div id="res"></div>
+    
+    <script>
+        function nascer() {
+            var txtp = window.document.getElementById('txtpais')
+            var origem = (txtp.value)
+            var r = window.document.getElementById('res')
+            r.innerText = `Você nasceu em ${origem}  `
+            if (origem == 'Brasil') {
+                r.innerHTML = `Você é <strong>Brasileiro</strong>`
+            } else {
+                r.innerHTML = `Você é <strong>Estrangeiro</strong>`
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
